@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Shopping Cart</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 12.0px}
+    p.p4 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 13.0px; font: 11.0px '.SF NS Text'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); background-color: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 13.0px; font: 11.0px '.SF NS Text'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); min-height: 13.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {text-decoration: underline ; font-kerning: none; color: #0000e9; -webkit-text-stroke: 0px #0000e9}
+    span.s5 {font: 11.0px Times; font-kerning: none}
+    span.s6 {font-kerning: none; background-color: #ffffff}
+    span.s7 {font: 12.0px Times; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s8 {font: 12.0px Times; font-kerning: none}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Assignment 1<span class="Apple-converted-space"> </span></b></span></h1>
+<p class="p2"><span class="s2"><a href="file:///Users/aravindadric/Downloads/user_info.html"><b>User Information</b></a></span><span class="s3"><b>   </b><a href="file:///Users/aravindadric/Downloads/shopping_cart.html"><span class="s4"><b>Shopping Cart</b></span></a><b>   </b><a href="file:///Users/aravindadric/Downloads/shipping_info.html"><span class="s4"><b>Shipping Info</b></span></a><b>   </b><a href="file:///Users/aravindadric/Downloads/checkout.html"><span class="s4"><b>Checkout</b></span></a><b>  <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<div style="border: 1px solid black; position: center; padding: 10px;">
+  <div style="text-align: center;">Shopping Cart</div>
+  <div>Product
+  <select id="products" onchange="updatePrice(this)">
+    <option value="null">Select</option>
+    <option value="0.50">Banana ($ .50 / lb)</option>
+    <option value="1.50">Apple($ 1.50 / lb)</option>
+    <option value="1.00">Oranges($ 1.00 / lb)</option>
+    <option value="2.00">Mangos($ 2.00 / lb)</option>
+  </select>
+</div><br/>
+  <div style="padding-top: 10px;">Units: <input type="number" name="units" id="units" onkeyup="updateTotal()"/></div><br/>
+  <div style="padding-top: 10px;">Unit Price: <span id="unitprice"></span></div><br/>
+  <div style="padding-top: 10px;">Total Price: <span id="totalprice"></span></div>
+</div>
+<p class="p7"><span class="s1"><i>Copyright © 2019</i></span><span class="s8"><span class="Apple-converted-space"> </span></span></p>
+<script type="text/javascript">
+  var prodValue;
+  var unitCount;
+  function updatePrice(product){
+    var idx = product.selectedIndex;
+    temp = product.options[idx].value;
+    console.log(temp);
+    if (temp != "null" && !isNaN(temp)) {
+      document.getElementById("unitprice").innerHTML = temp;
+      prodValue = parseFloat(temp);
+      if (!isNaN(unitCount)) {
+        updateTotal();
+      }
+    }else{
+      document.getElementById("unitprice").innerHTML = "";
+      document.getElementById("totalprice").innerHTML = "";
+    }
+  }
+  function updateTotal(){
+    unitCount = document.getElementById("units").value;
+    console.log(prodValue);
+    console.log(parseFloat(unitCount));
+    if (!isNaN(parseFloat(unitCount)) && !isNaN(prodValue)) {
+      document.getElementById("totalprice").innerHTML = prodValue*parseFloat(unitCount);
+    }else{
+      document.getElementById("totalprice").innerHTML = "";
+    }
+  }
+</script>
+</body>
+</html>

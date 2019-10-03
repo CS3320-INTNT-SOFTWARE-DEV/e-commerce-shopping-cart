@@ -23,7 +23,7 @@ nav {
   -ms-flex: 1;
   flex: 1;
   background-color: #ccccb3;
-  padding: 20px;
+  padding: 120x;
 }
 
 /* Style the list inside the menu */
@@ -55,4 +55,18 @@ footer {
   text-align: center;
   color: white;
 }
+/*style links */
+a:link, a:visited {
+  background-color: #ccccb3;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #DF740C;
+}
+
 

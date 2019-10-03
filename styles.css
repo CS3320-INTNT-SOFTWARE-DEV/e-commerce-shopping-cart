@@ -1,14 +1,17 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Style the header */
 header {
   background-color:#6FC3DF;
-  padding: 30px;
+  padding: 5px;
   text-align: center;
   font-size: 35px;
   color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color:  #DF740C;
 }
 
 /* Container for flexboxes */
@@ -24,6 +27,9 @@ nav {
   flex: 1;
   background-color: #ccccb3;
   padding: 120x;
+  border-style: solid;
+  border-width: 2px;
+  border-color:  #DF740C;
 }
 
 /* Style the list inside the menu */
@@ -54,6 +60,9 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color:  #DF740C;
 }
 /*style links */
 a:link, a:visited {
@@ -68,5 +77,14 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: #DF740C;
 }
+
+fieldset {
+  border-style: solid;
+  border-width: 2px;
+  border-color:  #DF740C;
+  padding: 20px;
+}
+
+
 
 

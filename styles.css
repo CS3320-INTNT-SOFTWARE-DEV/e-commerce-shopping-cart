@@ -25,7 +25,7 @@ nav {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background-color: #ccccb3;
+  background-color: #96968e;
   padding: 120x;
   border-style: solid;
   border-width: 2px;
@@ -56,7 +56,7 @@ input {
 
 /* Style the footer */
 footer {
-  background-color: #ccccb3;
+  background-color: #96968e;/*ccccb3*/
   padding: 10px;
   text-align: center;
   color: white;
@@ -66,7 +66,7 @@ footer {
 }
 /*style links */
 a:link, a:visited {
-  background-color: #ccccb3;
+  background-color: #96968e;/*ccccb3*/
   color: white;
   padding: 14px 25px;
   text-align: center;

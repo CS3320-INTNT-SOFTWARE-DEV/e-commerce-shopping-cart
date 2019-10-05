@@ -29,61 +29,80 @@
 
 	<main>
 
-	    <form>
+		<form action="#" onsubmit="return validateForm()">
+				<fieldset>
+					<legend>Shipping Information</legend>
+
+					<table>
+						
+						<tr>
+						<td class = "label">Use Physical Address</td>
+						<td><input 
+							type="checkbox" 
+							id="physicalAddress" >
+							
+						</td>
+						</tr>
+
+						<tr>
+						<td class = "label">Address 1</td>
+						<td><input 
+							type="text"
+							id="address1" 
+							required="required" 
+							title='Please Enter Address 1'
+							maxlength="100">
+						</td>
+						</tr>
+						<tr>
+						<td class = "label">Address 2</td>
+						<td><input 
+							type="text"
+							id="address2"
+							maxlength="100"
+							></td>
+						</tr>
+						<tr>
+						<td class = "label">City</td>
+						<td><input 
+							type="text" 
+							id="city" 
+							required = "required" 
+							title = 'Please Enter City'
+							maxlength="100"></td>
+						</tr>
+						<tr>
+						<td class = "label">State</td>
+						<td><select size="1" id="ccard">
+								<option value = "Alabama">AL</option>
+								<option value = "Alaska">AK</option>
+								<option value = "Arizona">AZ</option>
+								<option value = "Arkansas">AR</option>
+								<option value = "California">CA</option>
+							</select>
+						</td>
+						</tr>
+						<tr>
+						<td class = "label">Zip Code</td>
+						<td><input 
+							type="text"
+							id="zipcode" 
+							required = "required" 
+							title = 'Please Enter Zip Code'
+							minlength="5"
+							maxlength="9">
+						</td>
+						</tr>
 		
-		<fieldset>
-		    <table>
-			<tr>
-		   <td><p>
-			Use Physical Address <input type="checkbox">
-		   </p></td>
-			</tr>
-			<tr>
-		    <td><p>
-			Full Name: <input type = "text" maxlength="100">
-		    </p></td>
-			</tr>
-			<tr>
-		    <td><p>
-			Address 1: <input type = "text" maxlength="100">
-		    </p></td>
-			</tr>
-			<tr>
-		    <td><p>
-			Address 2: <input type = "text" maxlength="100">
-		    </p></td>
-			</tr>
-			<tr>
-		    <td><p>
-			City: <input type = "text" maxlength="100">
-		    </p></td>
-			</tr>
-		    </table>
-		    <table>
-			<tr>
-		    <td><p>
-			State:
-			<select>
-			    <option value = "Alabama">AL</option>
-			    <option value = "Alaska">AK</option>
-			    <option value = "Arizona">AZ</option>
-			    <option value = "Arkansas">AR</option>
-			    <option value = "California">CA</option>
-			</select>
-		    </p></td>
-			</tr>
-		    </table>
-		    <table>
-			<tr>
-		    <td><p>
-			Zip Code: <input type = "text" minlength="5" maxlength="9">
-		    </p></td>
-			</tr>
-		    </table>
+						<tr>
+						<td colspan="2"><input type="submit" title='Click here to submit.'></td>   
+						</tr>
 
-		</fieldset>
+					</table>
 
-	    </form>
+				</fieldset>
+
+		</form>
 
 	</main>
 

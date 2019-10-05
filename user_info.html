@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
 	<title>User Information</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css">
 
-    </head>
+	</head>
+	
     <body>
 	<header>
 	    <h1>
-		User Information
+			User Information
 	    </h1>
 	</header>
-	<section>
+	
+	<div>
 	    <nav>
 		<b>
 		    <a href = "user_info.html">User Information</a> &nbsp;
@@ -22,98 +25,103 @@
 		    
 		</b>
 	    </nav>
-	</section>
+	</div>
 	<br>
 
 	<main>
 
 	    <form action="#" onsubmit="return validateForm()">
+			<fieldset>
+				<legend>User Information</legend>
 
-		<table>
-		    
-		    <tr>
-			<td class = "label">Full Name</td>
-			<td><input 
-				type="text" 
-				id="fullName" 
-				required="required" 
-				title='Please Enter Full Name'
-				maxlength="100">
-			</td>
-		    </tr>
-		    <tr>
-			<td class = "label">Address 1</td>
-			<td><input 
-				type="text"
-				id="address1" 
-				required="required" 
-				title='Please Enter Address 1'
-				maxlength="100">
-			</td>
-		    </tr>
-		    <tr>
-			<td class = "label">Address 2</td>
-			<td><input 
-				type="text"
-				id="address2"
-				maxlength="100"
-			    ></td>
-		    </tr>
-		    <tr>
-			<td class = "label">City</td>
-			<td><input 
-				type="text" 
-				id="city" 
-				required = "required" 
-				title = 'Please Enter City'
-				maxlength="100"></td>
-		    </tr>
-		    <tr>
-			<td class = "label">State</td>
-			<td><input 
-				type="text"
-				id="state" 
-				required = "required" 
-				title = 'Please Enter State'
-				maxlength="100">
-			</td>
-		    </tr>
-		    <tr>
-			<td class = "label">Zip Code</td>
-			<td><input 
-				type="text"
-				id="zipcode" 
-				required = "required" 
-				title = 'Please Enter Zip Code'
-				minlength="5"
-				maxlength="9">
-			</td>
-		    </tr>
-		    <tr>
-			<td class = "label">Phone</td>
-			<td><input 
-				type="text"
-				id="phone" 
-				required = "required" 
-				title = 'Please Enter Phone'
-				maxlength="12">
-			</td>
-		    </tr>
-		    <tr>
-			<td class = "label">Email</td>
-			<td><input 
-				type="text" 
-				id="email" 
-				required = "required" 
-				title = 'Please Enter Email'
-				maxlength="100">
-			</td>
-		    </tr>
-		    <tr>
-			<td colspan="2"><input type="submit" title='Click here to submit.'></td>   
-		    </tr>
+				<table>
+					
+					<tr>
+					<td class = "label">Full Name</td>
+					<td><input 
+						type="text" 
+						id="fullName" 
+						required="required" 
+						title='Please Enter Full Name'
+						maxlength="100">
+					</td>
+					</tr>
+					<tr>
+					<td class = "label">Address 1</td>
+					<td><input 
+						type="text"
+						id="address1" 
+						required="required" 
+						title='Please Enter Address 1'
+						maxlength="100">
+					</td>
+					</tr>
+					<tr>
+					<td class = "label">Address 2</td>
+					<td><input 
+						type="text"
+						id="address2"
+						maxlength="100"
+						></td>
+					</tr>
+					<tr>
+					<td class = "label">City</td>
+					<td><input 
+						type="text" 
+						id="city" 
+						required = "required" 
+						title = 'Please Enter City'
+						maxlength="100"></td>
+					</tr>
+					<tr>
+					<td class = "label">State</td>
+					<td><select size="1" id="state">
+							<option value = "Alabama">AL</option>
+							<option value = "Alaska">AK</option>
+							<option value = "Arizona">AZ</option>
+							<option value = "Arkansas">AR</option>
+							<option value = "California">CA</option>
+						</select>
+					</td>
+					</tr>
+					<tr>
+					<td class = "label">Zip Code</td>
+					<td><input 
+						type="text"
+						id="zipcode" 
+						required = "required" 
+						title = 'Please Enter Zip Code'
+						minlength="5"
+						maxlength="9">
+					</td>
+					</tr>
+					<tr>
+					<td class = "label">Phone</td>
+					<td><input 
+						type="text"
+						id="phone" 
+						required = "required" 
+						title = 'Please Enter Phone'
+						maxlength="12">
+					</td>
+					</tr>
+					<tr>
+					<td class = "label">Email</td>
+					<td><input 
+						type="text" 
+						id="email" 
+						required = "required" 
+						title = 'Please Enter Email'
+						maxlength="100">
+					</td>
+					</tr>
+					<tr>
+					<td colspan="2"><input type="submit" title='Click here to submit.'></td>   
+					</tr>
 
-		</table>
+				</table>
+
+			</fieldset>
 
 	    </form>
             
@@ -122,8 +130,10 @@
 	</main>
 
 	<footer>
-	    <p><i>Copyright © 2019</i></p> 
-        </footer>
+
+		<p><i>Copyright © 2019</i></p>
+		 
+    </footer>
 
 </body>
 </html>

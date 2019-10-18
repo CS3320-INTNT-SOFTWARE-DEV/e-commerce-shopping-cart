@@ -5,10 +5,12 @@
 	<title>Checkout</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css">
-	
+
+  	<script src="javascript.js" async></script>
+
     </head>
     
-    <body>
+    <body onload="getTotal()">
 	
 	<header>
 	    <h1>Checkout</h1>
@@ -26,25 +28,26 @@
 	</div>
 	
 	<main>
-	    <form>
+	    <form onsubmit="return validateCard() & validateDate()">
 		<fieldset>
-		    <legend>Checkout Info</legend>
+			<legend>Checkout Info</legend>
+			
 		    <table>
 			<tr>
-			    <td><label for="shopAmnt">Total Shopping Amount:</label></td>
-			    <td><input type="text" name="shopAmnt" id="shopAmnt" placeholder="placeholder textbox"><br></td>
+			    <td><label for="shopAmnt">Total Shopping Amount: </label></td>
+			    <td><span id="shopAmnt"></span><br></td>
 			</tr>
 			<tr>
-			    <td><label for="totalTax">Total Tax:</label></td>
-			    <td><input type="text" name="totalTax" id="totalTax" placeholder="placeholder textbox"><br></td>
+			    <td><label for="totalTax">Total Tax: </label></td>
+			    <td><span id="totalTax"></span> <br></td>
 			</tr>
 			<tr>
-			    <td><label for="shipAmnt">Total Shipping Charges:</label></td>
-			    <td><input type="text" name="shipAmnt" id="shipAmnt" placeholder="placeholder textbox"><br></td>
+			    <td><label for="shipAmnt">Total Shipping Charges: </label></td>
+			    <td><span id="shipAmnt" ></span><br></td>
 			</tr>
 			<tr>
-			    <td><label for="totalAmnt">Total Amount Due:</label></td>
-			    <td><input type="text" name="totalAmnt" id="totalAmnt" placeholder="placeholder textbox"><br></td>
+			    <td><label for="totalAmnt">Total Amount Due: </label></td>
+			    <td><span  id="totalAmnt" ></span><br></td>
 			</tr>
 		    </table>
 		    <table>
@@ -75,7 +78,7 @@
 		    </label></td>
 			</tr>
 			<tr>
-			    <td><input type="submit" value="Submit Order"></td>
+			    <td colspan = "2"><input type="submit" name = "submit" value="Submit" onclick="confirmPage()" ></td>
 			</tr>
 		    </table>
 		</fieldset>

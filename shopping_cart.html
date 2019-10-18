@@ -2,6 +2,7 @@
 <html>
     <head>
 	<link rel="stylesheet" href="styles.css">
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title>Shopping Cart</title>
@@ -10,6 +11,9 @@
   <style type="text/css">
 
   </style>
+
+  <script src="javascript.js" async></script>
+
 </head>
 <body>
     <header><h1><span><b>Shopping Cart<span> </span></b></span></h1></header>
@@ -30,7 +34,7 @@
     <legend>Shopping Cart</legend>
     <div>
 	<div>Product
-	    <select id="products">
+	    <select id="products" onchange = "updatePrice(this)">
 		<option value="null">Select</option>
 		<option value="0.50">Banana ($ .50 / lb)</option>
 		<option value="1.50">Apple($ 1.50 / lb)</option>
@@ -38,9 +42,11 @@
 		<option value="2.00">Mangos($ 2.00 / lb)</option>
 	    </select>
 	</div><br/>
-	<div>Units: <input type="number" name="units" id="units"/></div><br/>
-	<div>Unit Price: <span id="unitprice"></span></div><br/>
-	<div>Total Price: <span id="totalprice"></span></div>
+	<div>Units: <input type="number" name="units" id="units" onkeyup="updateTotal()"/></div><br/>
+	<div>Unit Price: $<span id="unitprice"></span></div><br/>
+	<div>Total Price: $<span id="totalprice"></span></div>
+	<button onclick="addCart()">Add to cart</button>
+
     </div>
 </fieldset>
 </body>

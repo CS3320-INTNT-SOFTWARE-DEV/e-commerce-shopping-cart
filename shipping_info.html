@@ -29,7 +29,7 @@
 
 	<main>
 
-		<form action="#" onsubmit="return validateForm()">
+		<form action="insert.php" onsubmit="return validateForm()" method =  "post">
 				<fieldset>
 					<legend>Shipping Information</legend>
 
@@ -48,7 +48,8 @@
 						<td class = "label">Address 1</td>
 						<td><input 
 							type="text"
-							id="address1" 
+							id="address1"
+							name = "shippingaddress1"
 							required="required" 
 							title='Please Enter Address 1'
 							maxlength="100">
@@ -59,6 +60,7 @@
 						<td><input 
 							type="text"
 							id="address2"
+							name = "shippingaddress2"
 							maxlength="100"
 							></td>
 						</tr>
@@ -66,15 +68,15 @@
 						<td class = "label">City</td>
 						<td><input 
 							type="text" 
-							id="city" 
+							id="city"
+							name = "shippingcity"
 							required = "required" 
 							title = 'Please Enter City'
 							maxlength="100"></td>
 						</tr>
 						<tr>
 						<td class = "label">State</td>
-						<td><select size="1" id="shippingState">
-
+						<td><select size="1" id="shippingState" name = "shippingstate">
 
 							<option value="AL">AL</option>
 							<option value="AK">AK</option>
@@ -136,6 +138,7 @@
 						<td><input 
 							type="text"
 							id="zipcode" 
+							name = "shippingzipcode"
 							required = "required" 
 							title = 'Please Enter Zip Code'
 							minlength="5"
@@ -144,7 +147,7 @@
 						</tr>
 		
 						<tr>
-						<td colspan="2"><input type="submit" title='Click here to submit.'></td>   
+						<td colspan="2"><input type="submit" value = "Submit" title='Click here to submit.'></td>   
 						</tr>
 
 					</table>

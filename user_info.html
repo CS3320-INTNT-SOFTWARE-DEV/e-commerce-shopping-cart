@@ -30,7 +30,7 @@
 
 	<main>
 
-	    <form action="#" onsubmit="return validateForm()">
+	    <form action="insert.php" onsubmit="return validateForm()" method =  "post">
 			<fieldset>
 				<legend>User Information</legend>
 
@@ -40,7 +40,8 @@
 					<td class = "label">Full Name</td>
 					<td><input 
 						type="text" 
-						id="userfullName" 
+						id="userfullName"
+						name = "userfullname" 
 						required="required" 
 						title='Please Enter Full Name'
 						maxlength="100">
@@ -51,6 +52,7 @@
 					<td><input 
 						type="text"
 						id="useraddress1" 
+						name = "useraddress1"
 						required="required" 
 						title='Please Enter Address 1'
 						maxlength="100">
@@ -61,21 +63,23 @@
 					<td><input 
 						type="text"
 						id="useraddress2"
+						name ="useraddress2"
 						maxlength="100"
-						></td>
+					></td>
 					</tr>
 					<tr>
 					<td class = "label">City</td>
 					<td><input 
 						type="text" 
 						id="usercity" 
+						name = "usercity"
 						required = "required" 
 						title = 'Please Enter City'
 						maxlength="100"></td>
 					</tr>
 					<tr>
 					<td class = "label">State</td>
-					<td><select size="1" id="userstate">
+					<td><select size="1" id="userstate" name = "userstate">
 
 						<option value="AL">AL</option>
 						<option value="AK">AK</option>
@@ -137,6 +141,7 @@
 					<td><input 
 						type="text"
 						id="userzipcode" 
+						name = "userzipcode"
 						required = "required" 
 						title = 'Please Enter Zip Code'
 						minlength="5"
@@ -148,6 +153,7 @@
 					<td><input 
 						type="text"
 						id="userphone" 
+						name = "userphone"
 						required = "required" 
 						title = 'Please Enter Phone'
 						maxlength="12">
@@ -157,14 +163,15 @@
 					<td class = "label">Email</td>
 					<td><input 
 						type="text" 
-						id="useremail" 
+						id="useremail"
+						name = "useremail"
 						required = "required" 
 						title = 'Please Enter Email'
 						maxlength="100">
 					</td>
 					</tr>
 					<tr>
-					<td colspan="2"><input type="submit" title='Click here to submit.'></td>   
+					<td colspan="2"><input type="submit" value = "Submit" title='Click here to submit.'></td>   
 					</tr>
 
 				</table>

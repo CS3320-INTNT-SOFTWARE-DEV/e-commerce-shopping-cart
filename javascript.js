@@ -2,22 +2,38 @@
 
   var prodValue;
   var unitCount;
-  var total;
   var cart = 0;
 
 
   function addCart(){
-
-    cart = cart + total
-    console.log("Cart Total:" + cart);
-    localStorage.setItem("Cart", cart);
-    console.log(localStorage);
+    
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        cart= xmlhttp.responseText;
+        localStorage.setItem("Cart", cart);
+        
+        }
+      }
+    xmlhttp.open("POST","getTotalCost.php",true);
+    xmlhttp.send();
 
   }//end addCart
 
   function updatePrice(product){
     var idx = product.selectedIndex;
     temp = product.options[idx].value;
+    console.log("SQL_SUM:" + cart);
     console.log(temp);
     if (temp != "null" && !isNaN(temp)) {
       document.getElementById("unitprice").innerHTML = temp;
@@ -35,7 +51,7 @@
     console.log(prodValue);
     console.log(parseFloat(unitCount));
     if (!isNaN(parseFloat(unitCount)) && !isNaN(prodValue)) {
-        total = document.getElementById("totalprice").innerHTML = prodValue*parseFloat(unitCount);
+        document.getElementById("totalprice").innerHTML = prodValue*parseFloat(unitCount);
         
     }else{
       document.getElementById("totalprice").innerHTML = "";
@@ -125,17 +141,3 @@ function validateDate(){
 
 
 }//end validateDate
-
-function confirmPage(){
-
-  var ConfirmTotal = localStorage.getItem("Cart");
-  var address;
-
-  console.log("Confirm Page");
-
-  confirm("Order Summary:\n\n" +
-          "Products: \n" +
-          "Total: $" + ConfirmTotal +
-          "\nAddress: ");
-
-}//end confirmPage

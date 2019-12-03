@@ -10,7 +10,7 @@
 
     </head>
     
-    <body onload="getTotal()">
+    <body onload= "getTotal()">
 	
 	<header>
 	    <h1>Checkout</h1>
@@ -28,7 +28,7 @@
 	</div>
 	
 	<main>
-	    <form onsubmit="return validateCard() & validateDate()">
+	    <form action = "confirmationPage.html" onsubmit="return validateCard() & validateDate()">
 		<fieldset>
 			<legend>Checkout Info</legend>
 			
@@ -78,15 +78,17 @@
 		    </label></td>
 			</tr>
 			<tr>
-			    <td colspan = "2"><input type="submit" name = "submit" value="Submit" onclick="confirmPage()" ></td>
+			    <td colspan = "2"><input type="submit"name = "submit" value="Submit"></td>
 			</tr>
+			
 		    </table>
 		</fieldset>
-	    </form>
+		</form>
+		
+		<br>
 	</main>
-
 	<footer>
-	    <p><i>Copyright © 2019</i></p> 
-	</footer>
+		 
+    </footer>
     </body>
 </html>
